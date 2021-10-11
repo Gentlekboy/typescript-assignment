@@ -1,5 +1,4 @@
-// import { User } from "./classes"
-// import { PersonInterface, UserInterface } from "./interfaces"
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -15,12 +14,8 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var getfirstName = localStorage.getItem("firstName");
-var getlastName = localStorage.getItem("lastName");
-var getusername = localStorage.getItem("username");
-// const getemail = localStorage.getItem("email")
-var getage = localStorage.getItem("age");
-var getgender = localStorage.getItem("gender");
+exports.__esModule = true;
+exports.User = void 0;
 var Person = /** @class */ (function () {
     function Person(gender) {
         this.gender = gender;
@@ -59,21 +54,4 @@ var User = /** @class */ (function (_super) {
     };
     return User;
 }(Person));
-var userdata = {
-    firstName: getfirstName,
-    lastName: getlastName,
-    age: getage,
-    username: getusername
-};
-var user = new User(userdata, getgender);
-var showFirstName = document.querySelector("#showFirstName");
-var showlastName = document.querySelector("#showlastName");
-// const showEmail = document.querySelector("#showEmail") as HTMLParagraphElement
-var showUserName = document.querySelector("#showUserName");
-var showAge = document.querySelector("#showAge");
-var showGender = document.querySelector("#showGender");
-showFirstName.innerText = "First Name: " + user.returnFirstName();
-showlastName.innerText = "Last Name: " + user.returnLastName();
-showUserName.innerText = "Username: " + user.returnUserName();
-// showAge.innerText = user.returnAge()
-showGender.innerText = "Gender: " + user.returnGender();
+exports.User = User;
