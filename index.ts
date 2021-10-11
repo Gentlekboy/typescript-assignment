@@ -5,6 +5,7 @@ const username = document.querySelector("#username") as HTMLInputElement
 const age = document.querySelector("#age") as HTMLInputElement
 const gender = document.querySelector("#gender") as HTMLSelectElement
 const saveButton = document.querySelector("#saveButton") as HTMLInputElement
+const successMessageContainer = document.querySelector("#successMessageContainer") as HTMLDivElement
 
 saveButton.addEventListener("click", (e:Event)=>{
     e.preventDefault()
@@ -15,4 +16,6 @@ saveButton.addEventListener("click", (e:Event)=>{
     // window.localStorage.setItem("email", email.value)
     window.localStorage.setItem("age", age.value)
     window.localStorage.setItem("gender", gender.value)
+
+    successMessageContainer.style.display = "block"
 })

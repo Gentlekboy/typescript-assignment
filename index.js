@@ -5,6 +5,7 @@ var username = document.querySelector("#username");
 var age = document.querySelector("#age");
 var gender = document.querySelector("#gender");
 var saveButton = document.querySelector("#saveButton");
+var successMessageContainer = document.querySelector("#successMessageContainer");
 saveButton.addEventListener("click", function (e) {
     e.preventDefault();
     window.localStorage.setItem("firstName", firstName.value);
@@ -13,4 +14,5 @@ saveButton.addEventListener("click", function (e) {
     // window.localStorage.setItem("email", email.value)
     window.localStorage.setItem("age", age.value);
     window.localStorage.setItem("gender", gender.value);
+    successMessageContainer.style.display = "block";
 });

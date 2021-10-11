@@ -12,10 +12,6 @@ body{
     align-items: center;
 }
 
-/* h1{
-    text-align: center;
+#successMessageContainer{
+    display: none;
 }
-
-form{
-    margin: 0 auto;
-} */
